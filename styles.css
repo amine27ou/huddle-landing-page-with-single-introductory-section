@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+.header{
+    background:url(images/bg-desktop.svg),hsl(257, 40%, 49%) ;
+    min-height: 100vh;
+    position: relative;
+}
+.navbar .logo img{
+    width: 200px;
+}
+.left-col img{
+    width: 450px;
+}
+.navbar{
+    padding: 10px 40px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    padding:  40px;
+    color: white;
+}
+.right-col button{
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    margin: 10px 0;
+    box-shadow:0 5px 10px #333;
+    cursor: pointer;
+    transition: all .4s;
+    border: 2px solid white;
+}
+.right-col button:hover{
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    box-shadow: 0 0 0;
+}
+.right-col p{
+    margin: 10px 0;
+    text-transform: lowercase;
+}
+.social i{
+    border:1.3px solid white;
+    border-radius:50%;
+    padding: 7px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    transition:  all .3s;
+}
+.social i:hover{
+    transform: translateY(-7px);
+}
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+@media(max-width:728px){
+    .header{
+        background:url(images/bg-mobile.svg),hsl(257, 40%, 49%) ;
+        background-position: center;
+        background-size: cover;
+    }
+    .content{
+        flex-direction: column;
+        gap: 0;
+    }
+    .right-col{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .social{
+        position: inherit;
+    }
+    .left-col img{
+        width: 250px;
+    }
+}
